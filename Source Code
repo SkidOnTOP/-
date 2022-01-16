@@ -1,0 +1,12 @@
+local UILibrary = loadstring(game:HttpGet("https://pastebin.com/raw/V1ca2q9s"))()
+
+local MainUI = UILibrary.Load("Da Hood Dupe Gui")
+local FirstPage = MainUI.AddPage("Scripts")
+
+local FirstLabel = FirstPage.AddLabel("Credits to warlock for the scripts")
+local FirstButton = FirstPage.AddButton("Selling/Duping Tool", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/W9K/roblox-scripts/main/DHC/SimpleSeller.lua', true))()
+end)
+local SecondButton = FirstPage.AddButton("Money Counter", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/OG5/IkuScripts/main/DH/MoneyCounter', true))()
+end)
